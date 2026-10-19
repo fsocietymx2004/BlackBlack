@@ -1,1 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Black | Barbería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark-gray': '#2a2a2a', // Fondo gris oscuro
+                        'contour': '#000000', // Contornos negros
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar to match the aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2a2a2a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #000;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #fff;
+        }
+    </style>
+</head>
+<body class="bg-dark-gray text-white font-sans antialiased selection:bg-white selection:text-black">
 
+    <!-- Navigation -->
+    <nav class="border-b-[3px] border-contour bg-dark-gray sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <h1 class="text-3xl font-extrabold tracking-tighter uppercase">Black <span class="text-gray-400">Black</span></h1>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#servicios" class="text-white hover:text-gray-300 font-semibold transition-colors">Servicios</a>
+                    <a href="#estilistas" class="text-white hover:text-gray-300 font-semibold transition-colors">Estilistas</a>
+                    <a href="#galeria" class="text-white hover:text-gray-300 font-semibold transition-colors">Galería</a>
+                    <button class="bg-white text-black font-bold py-2 px-6 border-[3px] border-contour rounded-md hover:bg-gray-200 transition-transform hover:-translate-y-1 active:translate-y-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                        Reservar
+                    </button>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="bg-white text-black p-2 border-[3px] border-contour rounded-md shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2 space-y-8">
+            <h2 class="text-5xl lg:text-7xl font-extrabold tracking-tight leading-none">
+                ESTILO <br> Y PRECISIÓN.
+            </h2>
+            <p class="text-xl text-gray-300 max-w-md">
+                La barbería redefinida. Un espacio diseñado para tu imagen con los mejores especialistas de la ciudad.
+            </p>
+            <div class="flex gap-4">
+                <button class="bg-white text-black font-bold text-lg py-4 px-8 border-[3px] border-contour rounded-md hover:bg-gray-200 transition-all shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px]">
+                    Agendar Cita
+                </button>
+            </div>
+        </div>
+        
+        <!-- White Image Placeholder for Hero -->
+        <div class="w-full md:w-1/2">
+            <div class="w-full aspect-square bg-white border-[4px] border-contour rounded-xl shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center relative overflow-hidden">
+                <span class="text-black font-bold text-2xl opacity-30 uppercase tracking-widest">Placeholder</span>
+                <!-- Decorative lines inside placeholder to look more aesthetic -->
+                <div class="absolute inset-0 border-[2px] border-contour m-4 rounded-lg pointer-events-none opacity-20"></div>
+                <div class="absolute inset-0 border-[1px] border-contour m-8 rounded-lg pointer-events-none opacity-10"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories / Services Section -->
+    <section id="servicios" class="py-20 border-t-[3px] border-contour bg-dark-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 flex justify-between items-end">
+                <h3 class="text-4xl font-extrabold uppercase">Categorías</h3>
+                <button class="hidden md:block bg-white text-black font-bold py-2 px-6 border-[3px] border-contour rounded-md hover:bg-gray-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    Ver todo
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Service Card 1 -->
+                <div class="group border-[3px] border-contour rounded-xl bg-dark-gray shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all overflow-hidden flex flex-col">
+                    <!-- White Image Placeholder -->
+                    <div class="h-64 bg-white border-b-[3px] border-contour flex items-center justify-center relative">
+                        <span class="text-black font-bold text-xl opacity-30">Corte</span>
+                    </div>
+                    <!-- Content -->
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-2xl font-bold text-white mb-2 uppercase">Corte de Cabello</h4>
+                            <p class="text-gray-400 mb-6">Asesoría de imagen, lavado, corte con tijera o máquina y peinado final.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-bold text-white">$450</span>
+                            <button class="bg-white text-black font-bold py-2 px-4 border-[2px] border-contour rounded-md hover:bg-gray-200">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group border-[3px] border-contour rounded-xl bg-dark-gray shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all overflow-hidden flex flex-col">
+                    <!-- White Image Placeholder -->
+                    <div class="h-64 bg-white border-b-[3px] border-contour flex items-center justify-center relative">
+                        <span class="text-black font-bold text-xl opacity-30">Barba</span>
+                    </div>
+                    <!-- Content -->
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-2xl font-bold text-white mb-2 uppercase">Alineación de Barba</h4>
+                            <p class="text-gray-400 mb-6">Toalla caliente, perfilado con navaja, hidratación y aceite para barba.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-bold text-white">$300</span>
+                            <button class="bg-white text-black font-bold py-2 px-4 border-[2px] border-contour rounded-md hover:bg-gray-200">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group border-[3px] border-contour rounded-xl bg-dark-gray shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all overflow-hidden flex flex-col">
+                    <!-- White Image Placeholder -->
+                    <div class="h-64 bg-white border-b-[3px] border-contour flex items-center justify-center relative">
+                        <span class="text-black font-bold text-xl opacity-30">Estilo</span>
+                    </div>
+                    <!-- Content -->
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-2xl font-bold text-white mb-2 uppercase">Combo Black</h4>
+                            <p class="text-gray-400 mb-6">La experiencia completa. Corte, barba, mascarilla facial y bebida de cortesía.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-bold text-white">$650</span>
+                            <button class="bg-white text-black font-bold py-2 px-4 border-[2px] border-contour rounded-md hover:bg-gray-200">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 4: Tratamiento de Barba -->
+                <div class="group border-[3px] border-contour rounded-xl bg-dark-gray shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all overflow-hidden flex flex-col">
+                    <!-- White Image Placeholder -->
+                    <div class="h-64 bg-white border-b-[3px] border-contour flex items-center justify-center relative">
+                        <span class="text-black font-bold text-xl opacity-30">Cuidado Barba</span>
+                    </div>
+                    <!-- Content -->
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-2xl font-bold text-white mb-2 uppercase">Tratamiento de Barba</h4>
+                            <p class="text-gray-400 mb-6">Exfoliación, hidratación profunda y aplicación de bálsamos premium para el cuidado de tu barba.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-bold text-white">$350</span>
+                            <button class="bg-white text-black font-bold py-2 px-4 border-[2px] border-contour rounded-md hover:bg-gray-200">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 5: Tratamiento Capilar -->
+                <div class="group border-[3px] border-contour rounded-xl bg-dark-gray shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all overflow-hidden flex flex-col">
+                    <!-- White Image Placeholder -->
+                    <div class="h-64 bg-white border-b-[3px] border-contour flex items-center justify-center relative">
+                        <span class="text-black font-bold text-xl opacity-30">Capilar</span>
+                    </div>
+                    <!-- Content -->
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-2xl font-bold text-white mb-2 uppercase">Tratamiento Capilar</h4>
+                            <p class="text-gray-400 mb-6">Masaje capilar relajante, aplicación de ampolletas fortalecedoras y prevención de caída del cabello.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-bold text-white">$400</span>
+                            <button class="bg-white text-black font-bold py-2 px-4 border-[2px] border-contour rounded-md hover:bg-gray-200">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 6: Tratamiento Facial -->
+                <div class="group border-[3px] border-contour rounded-xl bg-dark-gray shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all overflow-hidden flex flex-col">
+                    <!-- White Image Placeholder -->
+                    <div class="h-64 bg-white border-b-[3px] border-contour flex items-center justify-center relative">
+                        <span class="text-black font-bold text-xl opacity-30">Facial</span>
+                    </div>
+                    <!-- Content -->
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-2xl font-bold text-white mb-2 uppercase">Tratamiento Facial</h4>
+                            <p class="text-gray-400 mb-6">Limpieza profunda, exfoliación, vaporización, mascarilla purificante y humectación.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-bold text-white">$500</span>
+                            <button class="bg-white text-black font-bold py-2 px-4 border-[2px] border-contour rounded-md hover:bg-gray-200">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Lookbook Section -->
+    <section id="galeria" class="py-20 border-t-[3px] border-contour">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-extrabold uppercase mb-4">Lookbook</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto">Nuestros mejores trabajos. Inspiración para tu próximo estilo.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="aspect-[3/4] bg-white border-[3px] border-contour rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
+                    <span class="text-black font-bold opacity-30">IMG 1</span>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="aspect-[3/4] bg-white border-[3px] border-contour rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center translate-y-4">
+                    <span class="text-black font-bold opacity-30">IMG 2</span>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="aspect-[3/4] bg-white border-[3px] border-contour rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
+                    <span class="text-black font-bold opacity-30">IMG 3</span>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="aspect-[3/4] bg-white border-[3px] border-contour rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center translate-y-4">
+                    <span class="text-black font-bold opacity-30">IMG 4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t-[3px] border-contour bg-dark-gray pt-16 pb-8 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-10 border-b border-gray-700 pb-12">
+                
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-extrabold tracking-tighter uppercase mb-4">Black <span class="text-gray-400">Black</span></h2>
+                    <p class="text-gray-400 max-w-xs">Elevando el estándar de la barbería clásica y moderna.</p>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start gap-2">
+                    <h4 class="text-white font-bold uppercase mb-2">Contacto</h4>
+                    <p class="text-gray-400">Av. Principal 123, Ciudad</p>
+                    <p class="text-gray-400">+52 123 456 7890</p>
+                    <p class="text-gray-400">hola@blackblack.com</p>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start gap-2">
+                    <h4 class="text-white font-bold uppercase mb-2">Horarios</h4>
+                    <p class="text-gray-400">Lun - Vie: 10:00 - 20:00</p>
+                    <p class="text-gray-400">Sábado: 09:00 - 18:00</p>
+                    <p class="text-gray-400">Domingo: Cerrado</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="text-gray-500 text-sm">© 2026 Black Black Barbería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
